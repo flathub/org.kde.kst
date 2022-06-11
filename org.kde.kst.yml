@@ -6,11 +6,11 @@ command: kst2
 rename-desktop-file: kst2.desktop
 rename-icon: kst
 finish-args:
-  - '--share=network'
-  - '--share=ipc'
-  - '--socket=fallback-x11'
-  - '--socket=wayland'
-  - '--device=dri'
+  - --share=network
+  - --share=ipc
+  - --socket=fallback-x11
+  - --socket=wayland
+  - --device=dri
 cleanup:
   - /include
   - /lib/cmake
@@ -26,13 +26,13 @@ modules:
   - name: gsl
     sources:
       - type: archive
-        url: 'https://ftp.gnu.org/gnu/gsl/gsl-2.7.1.tar.gz'
+        url: https://ftp.gnu.org/gnu/gsl/gsl-2.7.1.tar.gz
         sha256: dcb0fbd43048832b757ff9942691a8dd70026d5da0ff85601e52687f6deeb34b
         x-checker-data:
           type: anitya
           project-id: 1267
           stable-only: true
-          url-template: 'https://ftp.gnu.org/gnu/gsl/gsl-$version.tar.gz'
+          url-template: https://ftp.gnu.org/gnu/gsl/gsl-$version.tar.gz
 
   - name: cfitsio
     sources:
@@ -43,8 +43,8 @@ modules:
 
   - name: getdata
     config-opts:
-      - '--disable-bindings'
-      - '--enable-cplusplus'
+      - --disable-bindings
+      - --enable-cplusplus
     sources:
       - type: archive
         url: https://github.com/ketiltrout/getdata/releases/download/v0.11.0/getdata-0.11.0.tar.gz
@@ -53,12 +53,12 @@ modules:
   - name: matio
     sources:
       - type: archive
-        url: 'https://github.com/tbeu/matio/archive/v1.5.21.tar.gz'
+        url: https://github.com/tbeu/matio/archive/v1.5.21.tar.gz
         sha256: 2b09738fc765609794cdd4745649dcb2d7a528e9ef427c3b8e2a0d71d37d02f7
 
   - name: hdf5
     config-opts:
-      - '--enable-cxx'
+      - --enable-cxx
     sources:
       - type: archive
         url: https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.22/src/hdf5-1.8.22.tar.gz
@@ -70,13 +70,13 @@ modules:
   - name: netcdf
     sources:
       - type: archive
-        url: 'https://github.com/Unidata/netcdf-c/archive/v4.8.1.tar.gz'
-        sha256: bc018cc30d5da402622bf76462480664c6668b55eb16ba205a0dfb8647161dd0
+        url: https://github.com/Unidata/netcdf-c/archive/v4.9.0.tar.gz
+        sha256: 9f4cb864f3ab54adb75409984c6202323d2fc66c003e5308f3cdf224ed41c0a6
         x-checker-data:
           type: anitya
           project-id: 10354
           stable-only: true
-          url-template: 'https://github.com/Unidata/netcdf-c/archive/v$version.tar.gz'
+          url-template: https://github.com/Unidata/netcdf-c/archive/v$version.tar.gz
       - type: shell
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
@@ -84,7 +84,7 @@ modules:
   - name: netcdfcxx
     sources:
       - type: archive
-        url: 'ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-cxx-4.2.tar.gz'
+        url: ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-cxx-4.2.tar.gz
         sha256: 95ed6ab49a0ee001255eac4e44aacb5ca4ea96ba850c08337a3e4c9a0872ccd1
       - type: shell
         commands:
@@ -93,18 +93,18 @@ modules:
   - name: kst
     buildsystem: cmake-ninja
     config-opts:
-      - '-Dkst_release=2'
-      - '-Dkst_svnversion=0'
-      - '-Dkst_version_string=2.0.8'
-      - '-Dkst_qt5=ON'
-      - '-Dkst_install_prefix=/app'
-      - '-Dkst_merge_files=ON'
-      - '-Dkst_verbose=1'
+      - -Dkst_release=2
+      - -Dkst_svnversion=0
+      - -Dkst_version_string=2.0.8
+      - -Dkst_qt5=ON
+      - -Dkst_install_prefix=/app
+      - -Dkst_merge_files=ON
+      - -Dkst_verbose=1
     post-install:
       - install -Dm644 org.kde.kst.appdata.xml -t /app/share/metainfo
     sources:
       - type: git
-        url: 'https://invent.kde.org/graphics/kst-plot.git'
+        url: https://invent.kde.org/graphics/kst-plot.git
         commit: 5d734f489c8f711903590ee2c9db6981c088ac3d
       - type: patch
         path: hdf5_include.patch
