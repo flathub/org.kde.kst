@@ -3,8 +3,12 @@
   <id>org.kde.kst</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0</project_license>
+  <developer id="org.kde">
+    <name translate="no">KDE</name>
+  </developer>
   <name>kst</name>
   <summary>Interactive Data Visualization and Analysis</summary>
+  <launchable type="desktop-id">org.kde.kst.desktop</launchable>
   <description>
     <p>
       Kst is the fastest real-time large-dataset viewing and plotting tool available and has built-in data analysis functionality.
