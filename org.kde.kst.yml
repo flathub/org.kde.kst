@@ -40,6 +40,7 @@ modules:
         url: >-
           https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.1.0.tar.gz
         sha256: b367c695d2831958e7166921c3b356d5dfa51b1ecee505b97416ba39d1b6c17a
+        disable-http-decompression: true
 
   - name: getdata
     config-opts:
@@ -84,8 +85,8 @@ modules:
   - name: netcdfcxx
     sources:
       - type: archive
-        url: ftp://ftp.unidata.ucar.edu/pub/netcdf/netcdf-cxx-4.2.tar.gz
-        sha256: 95ed6ab49a0ee001255eac4e44aacb5ca4ea96ba850c08337a3e4c9a0872ccd1
+        url: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v4.3.1.tar.gz
+        sha256: e3fe3d2ec06c1c2772555bf1208d220aab5fee186d04bd265219b0bc7a978edc
       - type: shell
         commands:
           - cp -p /usr/share/automake-*/config.{sub,guess} .
