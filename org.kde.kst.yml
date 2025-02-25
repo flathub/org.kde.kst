@@ -69,6 +69,8 @@ modules:
           - cp -p /usr/share/automake-*/config.{sub,guess} bin
 
   - name: netcdf
+    config-opts:
+      - --enable-logging
     sources:
       - type: archive
         url: https://github.com/Unidata/netcdf-c/archive/v4.9.3.tar.gz
