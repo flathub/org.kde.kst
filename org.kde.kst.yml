@@ -58,15 +58,19 @@ modules:
         sha256: 2b09738fc765609794cdd4745649dcb2d7a528e9ef427c3b8e2a0d71d37d02f7
 
   - name: hdf5
+    subdir:
+      hdf5-1.14.6
     config-opts:
       - --enable-cxx
     sources:
       - type: archive
-        url: https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.8/hdf5-1.8.22/src/hdf5-1.8.22.tar.gz
-        sha256: 8406d96d9355ef8961d2739fb8fd5474ad4cdf52f3cfac657733defd9709bfaa
-      - type: shell
-        commands:
-          - cp -p /usr/share/automake-*/config.{sub,guess} bin
+        url: https://support.hdfgroup.org/releases/hdf5/v1_14/v1_14_6/downloads/hdf5-1.14.6.tar.gz
+        sha256: e4defbac30f50d64e1556374aa49e574417c9e72c6b1de7a4ff88c4b1bea6e9b
+        x-checker-data:
+          type: anitya
+          project-id: 1303
+          stable-only: true
+          url-template: https://support.hdfgroup.org/releases/hdf5/v${major}_${minor}/v${major}_${minor}_${patch}/downloads/hdf5-$version.tar.gz
 
   - name: netcdf
     config-opts:
