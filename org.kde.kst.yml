@@ -38,6 +38,10 @@ modules:
       - type: archive
         url: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.6.3.tar.gz
         sha256: fad44fff274fdda5ffcc0c0fff3bc3c596362722b9292fc8944db91187813600
+        x-checker-data:
+          type: anitya
+          project-id: 270
+          url-template: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-$version.tar.gz
 
   - name: getdata
     config-opts:
@@ -47,12 +51,20 @@ modules:
       - type: archive
         url: https://github.com/ketiltrout/getdata/releases/download/v0.11.0/getdata-0.11.0.tar.gz
         sha256: 082c241e04483c7cfbae5ad3ab9710d570051a888fb3f240f994b1cd61c9c26b
+        x-checker-data:
+          type: anitya
+          project-id: 896
+          url-template: https://github.com/ketiltrout/getdata/releases/download/v$version/getdata-$version.tar.gz
 
   - name: matio
     sources:
       - type: archive
         url: https://github.com/tbeu/matio/releases/download/v1.5.29/matio-1.5.29.tar.gz
         sha256: d9e5f7a2f2c594eff15f550e34729b01991cdd5a028a558be8ce595b32233afb
+        x-checker-data:
+          type: anitya
+          project-id: 1893
+          url-template: https://github.com/tbeu/matio/releases/download/v$version/matio-$version.tar.gz
 
   - name: hdf5
     buildsystem: cmake-ninja
@@ -62,6 +74,12 @@ modules:
       - type: archive
         url: https://github.com/HDFGroup/hdf5/releases/download/hdf5_1.14.6/hdf5-1.14.6.tar.gz
         sha256: e4defbac30f50d64e1556374aa49e574417c9e72c6b1de7a4ff88c4b1bea6e9b
+        x-checker-data:
+          type: anitya
+          project-id: 1303
+          url-template: https://github.com/HDFGroup/hdf5/releases/download/hdf5_$version/hdf5-$version.tar.gz
+          versions:
+            <: '2'
 
   - name: netcdf
     sources:
@@ -71,7 +89,6 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 10354
-          stable-only: true
           url-template: https://github.com/Unidata/netcdf-c/archive/v$version.tar.gz
 
   - name: netcdfcxx
@@ -79,6 +96,10 @@ modules:
       - type: archive
         url: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v4.3.1.tar.gz
         sha256: e3fe3d2ec06c1c2772555bf1208d220aab5fee186d04bd265219b0bc7a978edc
+        x-checker-data:
+          type: anitya
+          project-id: 13548
+          url-template: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v$version.tar.gz
       - type: patch
         path: netcdf-cxx4-logging.patch
 
@@ -95,10 +116,13 @@ modules:
     post-install:
       - install -Dm644 org.kde.kst.appdata.xml -t /app/share/metainfo
     sources:
-      - type: git
-        url: https://invent.kde.org/graphics/kst-plot.git
-        commit: 07d15fac34c718b9433bd9480b78079031032e4e
-        tag: v2.1-2024-10-20
+      - type: archive
+        url: https://invent.kde.org/graphics/kst-plot/-/archive/v2.1-2024-10-20/kst-plot-v2.1-2024-10-20.tar.gz
+        sha256: 183fa50523ccbc1d75b50c9dbfb02673d74abb1dbc1f45e1c9c5848a864350d2
+        x-checker-data:
+          type: anitya
+          project-id: 379732
+          url-template: https://invent.kde.org/graphics/kst-plot/-/archive/v$version/kst-plot-v$version.tar.gz
       - type: patch
         paths:
           - hdf5_include.patch
