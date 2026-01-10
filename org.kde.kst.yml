@@ -59,8 +59,8 @@ modules:
   - name: matio
     sources:
       - type: archive
-        url: https://github.com/tbeu/matio/releases/download/v1.5.29/matio-1.5.29.tar.gz
-        sha256: d9e5f7a2f2c594eff15f550e34729b01991cdd5a028a558be8ce595b32233afb
+        url: https://github.com/tbeu/matio/releases/download/v1.5.30/matio-1.5.30.tar.gz
+        sha256: 8bd3b9477042ecc00dd71c04762fa58468e14cccc32fd8c6826c2da1e8bc3107
         x-checker-data:
           type: anitya
           project-id: 1893
