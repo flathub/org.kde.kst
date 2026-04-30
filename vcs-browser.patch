@@ -1,0 +1,72 @@
+From 5f07fb8a54e537427079ccee97f85b0f28f4ac4a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Thu, 30 Apr 2026 15:23:21 +0200
+Subject: [PATCH] Add missing VCS browser URL.
+
+---
+ src/kst/org.kde.kst.metainfo.xml | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/src/kst/org.kde.kst.metainfo.xml b/src/kst/org.kde.kst.metainfo.xml
+index 2f5146f2..f6101ca7 100644
+--- a/src/kst/org.kde.kst.metainfo.xml
++++ b/src/kst/org.kde.kst.metainfo.xml
+@@ -12,6 +12,7 @@
+   <name xml:lang="ar">كاست</name>
+   <name xml:lang="ca">Kst</name>
+   <name xml:lang="ca-valencia">Kst</name>
++  <name xml:lang="cs">Kst</name>
+   <name xml:lang="es">Kst</name>
+   <name xml:lang="fr">Kst</name>
+   <name xml:lang="gl">Kst</name>
+@@ -19,6 +20,7 @@
+   <name xml:lang="nl">Kst</name>
+   <name xml:lang="pl">Kst</name>
+   <name xml:lang="pt-BR">Kst</name>
++  <name xml:lang="sk">Kst</name>
+   <name xml:lang="sl">Kst</name>
+   <name xml:lang="sv">Kst</name>
+   <name xml:lang="tr">Kst</name>
+@@ -27,6 +29,7 @@
+   <summary xml:lang="ar">عارض بيانات</summary>
+   <summary xml:lang="ca">Visualitzador de dades</summary>
+   <summary xml:lang="ca-valencia">Visor de dades</summary>
++  <summary xml:lang="cs">Prohlížeč dat</summary>
+   <summary xml:lang="es">Visor de datos</summary>
+   <summary xml:lang="fr">Afficheur de données</summary>
+   <summary xml:lang="gl">Visor de datos</summary>
+@@ -34,6 +37,7 @@
+   <summary xml:lang="nl">Bekijken van gegevens</summary>
+   <summary xml:lang="pl">Przeglądarka danych</summary>
+   <summary xml:lang="pt-BR">Visualizador de dados</summary>
++  <summary xml:lang="sk">Prehliadač údajov</summary>
+   <summary xml:lang="sl">Ogledovalnik podatkov</summary>
+   <summary xml:lang="sv">Datavisning</summary>
+   <summary xml:lang="tr">Veri Görüntüleyicisi</summary>
+@@ -43,6 +47,7 @@
+     <p xml:lang="ar">هذا التطبيق يستخدم لعرض البيانات العلمية</p>
+     <p xml:lang="ca">Aquesta aplicació es fa servir per a mostrar dades científiques.</p>
+     <p xml:lang="ca-valencia">Esta aplicació s'utilitza per a mostrar dades científiques.</p>
++    <p xml:lang="cs">Tato aplikace slouží k zobrazování vědeckých dat.</p>
+     <p xml:lang="es">Esta aplicación se usa para mostrar datos científicos.</p>
+     <p xml:lang="fr">Cette application est utilisée pour l'affichage de données scientifiques.</p>
+     <p xml:lang="gl">Aplicación para amosar datos científicos.</p>
+@@ -50,6 +55,7 @@
+     <p xml:lang="nl">Deze toepassing wordt gebruikt om wetenschappelijke gegevens te tonen.</p>
+     <p xml:lang="pl">Ta aplikacja służy do wyświetlania danych naukowych.</p>
+     <p xml:lang="pt-BR">Este aplicativo é usado para exibir dados científicos.</p>
++    <p xml:lang="sk">Táto aplikácia sa používa na zobrazovanie vedeckých údajov.</p>
+     <p xml:lang="sl">Ta aplikacija se uporablja za prikaz znanstvenih podatkov.</p>
+     <p xml:lang="sv">Programmet används för att visa vetenskaplig data.</p>
+     <p xml:lang="tr">Bu uygulama, bilimsel verileri görüntülemek için kullanılır.</p>
+@@ -57,6 +63,7 @@
+   </description>
+   <url type="homepage">https://apps.kde.org/kst/</url>
+   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=kst</url>
++  <url type="vcs-browser">https://invent.kde.org/graphics/kst-plot/</url>
+   <categories>
+     <category>Education</category>
+   </categories>
+-- 
+GitLab
+
