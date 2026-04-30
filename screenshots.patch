@@ -1,0 +1,37 @@
+From d716144f000523ec72668ca89a48163a92191198 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Thu, 30 Apr 2026 15:52:32 +0200
+Subject: [PATCH] Add Screens
+
+---
+ src/kst/org.kde.kst.metainfo.xml | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/src/kst/org.kde.kst.metainfo.xml b/src/kst/org.kde.kst.metainfo.xml
+index 2f5146f2..60329800 100644
+--- a/src/kst/org.kde.kst.metainfo.xml
++++ b/src/kst/org.kde.kst.metainfo.xml
+@@ -55,6 +55,20 @@
+     <p xml:lang="tr">Bu uygulama, bilimsel verileri görüntülemek için kullanılır.</p>
+     <p xml:lang="uk">Цю програму призначено для показу наукових даних.</p>
+   </description>
++  <screenshots>
++    <screenshot>
++      <image type="source">https://kst-plot.kde.org/screenshots/sessions/images_and_matrices.png</image>
++      <caption>Working with matrices and images</caption>
++    </screenshot>
++    <screenshot type="default">
++      <image type="source">https://kst-plot.kde.org/screenshots/sessions/non_modal_dialogs.png</image>
++      <caption>Non-modal dialogs allow you to use many tools simultaneously</caption>
++    </screenshot>
++    <screenshot>
++      <image type="source">https://kst-plot.kde.org/screenshots/dialogs/menu_plot_zoom.png</image>
++      <caption>Plot context menu with zoom options</caption>
++    </screenshot>
++  </screenshots>
+   <url type="homepage">https://apps.kde.org/kst/</url>
+   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=kst</url>
+   <categories>
+-- 
+GitLab
+

@@ -1,0 +1,57 @@
+From af1296b986bcb41b2547380a55822045d306ab61 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?=
+Date: Fri, 1 May 2026 10:00:29 +0200
+Subject: [PATCH 1/2] Adapt AppStream metadata to release 3.0.0
+
+---
+ src/kst/org.kde.kst.metainfo.xml | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/kst/org.kde.kst.metainfo.xml b/src/kst/org.kde.kst.metainfo.xml
+index feac6a26..96874d09 100644
+--- a/src/kst/org.kde.kst.metainfo.xml
++++ b/src/kst/org.kde.kst.metainfo.xml
+@@ -6,7 +6,7 @@
+ <component type="desktop">
+   <id>org.kde.kst</id>
+   <provides>
+-    <binary>kst2</binary>
++    <binary>kst</binary>
+   </provides>
+   <name>Kst</name>
+   <name xml:lang="ar">كاست</name>
+@@ -78,6 +78,7 @@
+   <launchable type="desktop-id">org.kde.kst.desktop</launchable>
+   <content_rating type="oars-1.1"/>
+   <releases>
++    <release version="3.0.0" date="2026-02-09"/>
+     <release version="2.1.x" date="2025-07-21"/>
+   </releases>
+ </component>
+-- 
+GitLab
+
+
+From ae36651f3727045b411168d7835673bab437981c Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Matthias=20Mail=C3=A4nder?= <matthias@mailaender.name>
+Date: Fri, 1 May 2026 10:01:51 +0200
+Subject: [PATCH 2/2] Add an older release date.
+
+---
+ src/kst/org.kde.kst.metainfo.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/kst/org.kde.kst.metainfo.xml b/src/kst/org.kde.kst.metainfo.xml
+index 96874d09..ce469fdd 100644
+--- a/src/kst/org.kde.kst.metainfo.xml
++++ b/src/kst/org.kde.kst.metainfo.xml
+@@ -80,5 +80,6 @@
+   <releases>
+     <release version="3.0.0" date="2026-02-09"/>
+     <release version="2.1.x" date="2025-07-21"/>
++    <release version="2.0.8" date="2014-07-20"/>
+   </releases>
+ </component>
+-- 
+GitLab
+

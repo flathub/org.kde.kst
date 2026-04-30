@@ -1,9 +1,8 @@
 app-id: org.kde.kst
 runtime: org.kde.Platform
-runtime-version: 5.15-25.08
+runtime-version: '6.10'
 sdk: org.kde.Sdk
-command: kst2
-rename-desktop-file: kst2.desktop
+command: kst
 rename-icon: kst
 finish-args:
   - --share=network
@@ -26,12 +25,12 @@ modules:
   - name: gsl
     sources:
       - type: archive
-        url: https://ftp.gnu.org/gnu/gsl/gsl-2.8.tar.gz
+        url: https://ftpmirror.gnu.org/gsl/gsl-2.8.tar.gz
         sha256: 6a99eeed15632c6354895b1dd542ed5a855c0f15d9ad1326c6fe2b2c9e423190
         x-checker-data:
           type: anitya
           project-id: 1267
-          url-template: https://ftp.gnu.org/gnu/gsl/gsl-$version.tar.gz
+          url-template: https://ftpmirror.gnu.org/gsl/gsl-$version.tar.gz
 
   - name: cfitsio
     sources:
@@ -68,18 +67,19 @@ modules:
 
   - name: hdf5
     buildsystem: cmake-ninja
-    subdir: hdf5-1.14.6
     builddir: true
+    config-opts:
+      - -DHDF5_ENABLE_ZLIB_SUPPORT=ON
+      - -DHDF5_BUILD_CPP_LIB=ON
+      - -DBUILD_STATIC_LIBS=OFF
     sources:
       - type: archive
-        url: https://github.com/HDFGroup/hdf5/releases/download/hdf5_1.14.6/hdf5-1.14.6.tar.gz
-        sha256: e4defbac30f50d64e1556374aa49e574417c9e72c6b1de7a4ff88c4b1bea6e9b
+        url: https://github.com/HDFGroup/hdf5/archive/refs/tags/2.1.1.tar.gz
+        sha256: 5849ed7a81be6bc84ff8aa65dd966430adf0daf71e6bcb734b7a37474f92c859
         x-checker-data:
           type: anitya
           project-id: 1303
           url-template: https://github.com/HDFGroup/hdf5/releases/download/hdf5_$version/hdf5-$version.tar.gz
-          versions:
-            <: '2'
 
   - name: netcdf
     sources:
@@ -105,28 +105,16 @@ modules:
 
   - name: kst
     buildsystem: cmake-ninja
-    config-opts:
-      - -Dkst_release=ON
-      - -Dkst_version_string=2.1
-      - -Dkst_qt5=ON
-      - -Dkst_install_prefix=/app
-      - -Dkst_install_libdir=/app/lib
-      - -Dkst_merge_files=ON
-      - -Dkst_verbose=1
-    post-install:
-      - install -Dm644 org.kde.kst.appdata.xml -t /app/share/metainfo
     sources:
       - type: archive
-        url: https://invent.kde.org/graphics/kst-plot/-/archive/v2.1-2024-10-20/kst-plot-v2.1-2024-10-20.tar.gz
-        sha256: 183fa50523ccbc1d75b50c9dbfb02673d74abb1dbc1f45e1c9c5848a864350d2
+        url: https://invent.kde.org/graphics/kst-plot/-/archive/3.0.0/kst-plot-3.0.0.tar.gz
+        sha256: c9c96030585d833fbb0344b7e67109f2343dfe98be6a3a5d4d55a19963d7316a
         x-checker-data:
           type: anitya
           project-id: 379732
           url-template: https://invent.kde.org/graphics/kst-plot/-/archive/v$version/kst-plot-v$version.tar.gz
       - type: patch
         paths:
-          - hdf5_include.patch
-          - cmake4.patch
-          - hdf5_cpp.patch
-      - type: file
-        path: org.kde.kst.appdata.xml
+          - vcs-browser.patch
+          - screenshots.patch
+          - version.patch
