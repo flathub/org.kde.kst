@@ -35,8 +35,8 @@ modules:
   - name: cfitsio
     sources:
       - type: archive
-        url: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.6.3.tar.gz
-        sha256: fad44fff274fdda5ffcc0c0fff3bc3c596362722b9292fc8944db91187813600
+        url: https://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/cfitsio-4.6.4.tar.gz
+        sha256: 227b637b91c9820ea96f39a65eb087f053de567d82f4338e2884f123f8183c55
         x-checker-data:
           type: anitya
           project-id: 270
@@ -84,8 +84,8 @@ modules:
   - name: netcdf
     sources:
       - type: archive
-        url: https://github.com/Unidata/netcdf-c/archive/v4.10.0.tar.gz
-        sha256: ce160f9c1483b32d1ba8b7633d7984510259e4e439c48a218b95a023dc02fd4c
+        url: https://github.com/Unidata/netcdf-c/archive/v4.10.1.tar.gz
+        sha256: 33c27231c478c3b35da7c7758fbdd02da1fe407abcb16ddfe195f69d164f930d
         x-checker-data:
           type: anitya
           project-id: 10354
@@ -107,8 +107,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://invent.kde.org/graphics/kst-plot/-/archive/3.0.0/kst-plot-3.0.0.tar.gz
-        sha256: c9c96030585d833fbb0344b7e67109f2343dfe98be6a3a5d4d55a19963d7316a
+        url: https://invent.kde.org/graphics/kst-plot/-/archive/v2.1-2024-10-20/kst-plot-v2.1-2024-10-20.tar.gz
+        sha256: 183fa50523ccbc1d75b50c9dbfb02673d74abb1dbc1f45e1c9c5848a864350d2
         x-checker-data:
           type: anitya
           project-id: 379732
