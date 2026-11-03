@@ -79,7 +79,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 1303
-          url-template: https://github.com/HDFGroup/hdf5/releases/download/hdf5_$version/hdf5-$version.tar.gz
+          url-template: https://github.com/HDFGroup/hdf5/releases/download/$version/hdf5-$version.tar.gz
 
   - name: netcdf
     sources:
@@ -112,7 +112,7 @@ modules:
         x-checker-data:
           type: anitya
           project-id: 379732
-          url-template: https://invent.kde.org/graphics/kst-plot/-/archive/v$version/kst-plot-v$version.tar.gz
+          url-template: https://invent.kde.org/graphics/kst-plot/-/archive/$version/kst-plot-$version.tar.gz
       - type: patch
         paths:
           - vcs-browser.patch
