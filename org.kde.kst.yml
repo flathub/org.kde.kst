@@ -100,8 +100,6 @@ modules:
           type: anitya
           project-id: 13548
           url-template: https://github.com/Unidata/netcdf-cxx4/archive/refs/tags/v$version.tar.gz
-      - type: patch
-        path: netcdf-cxx4-logging.patch
 
   - name: kst
     buildsystem: cmake-ninja
@@ -113,8 +111,3 @@ modules:
           type: anitya
           project-id: 379732
           url-template: https://invent.kde.org/graphics/kst-plot/-/archive/$version/kst-plot-$version.tar.gz
-      - type: patch
-        paths:
-          - vcs-browser.patch
-          - screenshots.patch
-          - version.patch
