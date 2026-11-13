@@ -74,8 +74,8 @@ modules:
       - -DBUILD_STATIC_LIBS=OFF
     sources:
       - type: archive
-        url: https://github.com/HDFGroup/hdf5/archive/refs/tags/2.1.1.tar.gz
-        sha256: 5849ed7a81be6bc84ff8aa65dd966430adf0daf71e6bcb734b7a37474f92c859
+        url: https://github.com/HDFGroup/hdf5/releases/download/2.2.0/hdf5-2.2.0.tar.gz
+        sha256: 1a1ab8209b35586fbc1aa279ba76d102130b95badcb20ca329587219112d8c16
         x-checker-data:
           type: anitya
           project-id: 1303
